@@ -1,6 +1,6 @@
 spec = Gem::Specification.new do |s|
   s.name              = "oauth2-provider"
-  s.version           = "0.1.0"
+  s.version           = "0.1.1"
   s.summary           = "Simple OAuth 2.0 provider toolkit"
   s.author            = "James Coglan"
   s.email             = "james@songkick.com"
@@ -24,4 +24,3 @@ spec = Gem::Specification.new do |s|
   s.add_development_dependency("thin")
   s.add_development_dependency("factory_girl", "~> 2.0")
 end
-
