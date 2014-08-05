@@ -1,6 +1,6 @@
 spec = Gem::Specification.new do |s|
   s.name              = "oauth2-provider"
-  s.version           = "0.1.1"
+  s.version           = "0.1.1.sharedtokens"
   s.summary           = "Simple OAuth 2.0 provider toolkit"
   s.author            = "James Coglan"
   s.email             = "james@songkick.com"
@@ -17,7 +17,7 @@ spec = Gem::Specification.new do |s|
   s.add_dependency("json")
   s.add_dependency("rack")
 
-  # s.add_development_dependency("activerecord", "~> 3.0.0") # The SQLite adapter in 3.1 is broken
+  s.add_development_dependency("activerecord", "~> 3.0.0") # The SQLite adapter in 3.1 is broken
   s.add_development_dependency("rspec")
   s.add_development_dependency("sqlite3")
   s.add_development_dependency("sinatra", ">= 1.3.0")
