@@ -23,19 +23,19 @@ module OAuth2
 
       def self.create_code(client)
         OAuth2.generate_id do |code|
-          client.authorizations.count(:conditions => {:code => code}).zero?
+          client.authorizations.where(:code => code).count.zero?
         end
       end
 
       def self.create_access_token
         OAuth2.generate_id do |token|
-          count(:conditions => {:access_token => token}).zero?
+          where(:access_token => token).count.zero?
         end
       end
 
       def self.create_refresh_token(client)
         OAuth2.generate_id do |refresh_token|
-          client.authorizations.count(:conditions => {:refresh_token => refresh_token}).zero?
+          client.authorizations.where(:refresh_token => refresh_token).count.zero?
         end
       end
 
